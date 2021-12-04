@@ -10,6 +10,10 @@ function Page(){
     <div>
       <Header />
       <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
     </div>
   )
 }
