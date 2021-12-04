@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import Image from '../assets/images/img-3.png';
+import Image from '../assets/images/img-2.png';
 import Marker from '../assets/images/marker.svg';
 
 
@@ -57,6 +57,8 @@ const ContentTitle = styled.h1`
     margin-top: 10px;
 `
 export default function Card(props){
+    //TODO: Use props to display card Content
+    //TODO: Extract Card details to a data.js file and use .map() to display it.
     return(
         <div>
             <CardContainer>
@@ -64,7 +66,7 @@ export default function Card(props){
                 <CardContent>
                   <ContentHeader>
                     <CardMarker src={Marker} />
-                    <ContentLocation>JAPAN</ContentLocation>
+                    <ContentLocation>AUSTRALIA</ContentLocation>
                     <Link href="www.google">View on Google Maps</Link>
                   </ContentHeader>
 

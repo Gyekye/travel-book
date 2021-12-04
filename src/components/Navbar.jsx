@@ -4,18 +4,17 @@ import styled  from "styled-components";
 import Logo from '../assets/images/logo.svg'
 
 const Nav = styled.header`
-    display:flex;
-    justify-content:center;
-    align-items:center;
     background-color:#F55A5A;
     height:80px;
     text-align:center;
     padding: 1.0em;
-    color:#ffff
+    color:#ffff;
 `;
 
 const NavText = styled.h2`
     font-size:25px;
+    color: #ffff;
+    font-weight: 800;
 `;
 
 const NavLogo = styled.img`
@@ -25,11 +24,20 @@ const NavLogo = styled.img`
     margin-right:5px;
 `;
 
+const NavContent = styled.div`
+   display:flex;
+    justify-content:flex-start;
+    align-items:center;
+    margin: 0 24%;
+`;
+
 export default function Header(){
     return(
         <Nav>
-            <NavLogo src={Logo}></NavLogo>
-            <NavText> Travel Book</NavText>
+            <NavContent>
+                <NavLogo src={Logo}></NavLogo>
+                <NavText> Travel Book</NavText>
+            </NavContent>
         </Nav>
     );
 }
