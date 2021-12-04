@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 
-import Image from '../assets/images/img-2.png';
 import Marker from '../assets/images/marker.svg';
 
 
@@ -44,6 +43,7 @@ const ContentLocation = styled.p`
     font-weight: 400;
     color: #2B283A;
     letter-spacing: 2px;
+    text-transform: uppercase;
 `
 const Link = styled.a`
     margin-left: 10px;
@@ -57,22 +57,20 @@ const ContentTitle = styled.h1`
     margin-top: 10px;
 `
 export default function Card(props){
-    //TODO: Use props to display card Content
-    //TODO: Extract Card details to a data.js file and use .map() to display it.
     return(
         <div>
             <CardContainer>
-                <CardImage src={Image} />
+                <CardImage src={props.image} />
                 <CardContent>
                   <ContentHeader>
                     <CardMarker src={Marker} />
-                    <ContentLocation>AUSTRALIA</ContentLocation>
-                    <Link href="www.google">View on Google Maps</Link>
+                    <ContentLocation>{props.country}</ContentLocation>
+                    <Link href={props.mapUrl}>View on Google Maps</Link>
                   </ContentHeader>
 
-                  <ContentTitle> Mount Fuji</ContentTitle>
-                  <span>12 Jan, 2021 - 2021, 24 Jan</span>
-                  <p>Mount Fuji is the tallest mountain in Japan, standing at 3,776 meters (12,380 feet). Mount Fuji is the single most popular tourist site in Japan, for both Japanese and foreign tourists.</p>
+                  <ContentTitle> {props.name} </ContentTitle>
+                  <span>{props.startDate}, {props.startYear} - {props.endYear}, {props.endDate}</span>
+                  <p>{props.description}</p>
                 </CardContent>
             </CardContainer>
         </div>
