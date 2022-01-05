@@ -1,2 +1,2 @@
 # travel-book
-A simple travel  jourbel built with React 
+A simple travel  journel built with React 
